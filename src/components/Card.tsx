@@ -45,7 +45,7 @@ const questions: Question[] = [
   // 5
   {
     text: "Stammt die Milch von einem Tier, das traditionell als koscher gilt (z.B. Kuh, Schaf, Ziege)?",
-    yes: 6,
+    yes: 8,
     no: 16,
     terminal: false,
   },
@@ -73,12 +73,12 @@ const questions: Question[] = [
   // 9
   {
     text: "Hat der Fisch Flossen und Schuppen (z.B. Lachs, Thunfisch, Kabeljau)?",
-    yes: 10,
+    yes: 15,
     no: 16,
     terminal: false,
   },
 
-  // 10
+  // 10 unused
   {
     text: "Enthält das Produkt zusätzlich Fleisch oder Milch?",
     yes: 16,
@@ -151,7 +151,7 @@ export default function Card() {
   return (
     <div
       class="d-flex justify-content-center align-items-center min-vh-100 bg-light dark:bg-dark"
-      style="transition-all: 0.2s ease;"
+      style="transition: all 0.2s ease;"
     >
       <div
         class="card border-0 shadow-lg p-5"
