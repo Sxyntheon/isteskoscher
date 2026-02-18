@@ -143,6 +143,11 @@ export default function Card() {
     }
   };
 
+  const reset = () => {
+	setCurrentIndex(0);
+	setKosher(undefined);
+  };
+
   return (
     <div
       class="d-flex justify-content-center align-items-center min-vh-100 bg-light dark:bg-dark"
@@ -183,6 +188,15 @@ export default function Card() {
                 onClick={() => nextQuestion(false)}
               >
                 <i class="bi bi-x-lg" style={{ "font-size": "24px" }}></i>
+              </button>
+            </Show>
+			<Show when={questions[currentIndex()].terminal}>
+              <button
+                class="btn btn-light btn-lg rounded-circle d-flex align-items-center justify-content-center"
+                style={{ width: "60px", height: "60px" }}
+                onClick={reset}
+              >
+                <i class="bi bi-arrow-counterclockwise" style={{ "font-size": "48px" }}></i>
               </button>
             </Show>
           </div>
